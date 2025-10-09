@@ -37,7 +37,6 @@
   "resources":[
     {"id":{"name":"obj_back","path":"objects/obj_back/obj_back.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
-    {"id":{"name":"obj_floco","path":"objects/obj_floco/obj_floco.yy",},},
     {"id":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},},
     {"id":{"name":"obj_katana_hitbox","path":"objects/obj_katana_hitbox/obj_katana_hitbox.yy",},},
     {"id":{"name":"obj_killerface","path":"objects/obj_killerface/obj_killerface.yy",},},
