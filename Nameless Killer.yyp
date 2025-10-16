@@ -27,7 +27,9 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"WhatsApp Audio 2025-10-11 at 18.23.02.mp4","CopyToMask":-1,"filePath":"datafiles","name":"WhatsApp Audio 2025-10-11 at 18.23.02.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -45,6 +47,7 @@
     {"id":{"name":"obj_play","path":"objects/obj_play/obj_play.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_quit","path":"objects/obj_quit/obj_quit.yy",},},
+    {"id":{"name":"obj_ruido","path":"objects/obj_ruido/obj_ruido.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
     {"id":{"name":"obj_volume_display","path":"objects/obj_volume_display/obj_volume_display.yy",},},
     {"id":{"name":"obj_volume_down","path":"objects/obj_volume_down/obj_volume_down.yy",},},
@@ -67,6 +70,7 @@
     {"id":{"name":"spr_play","path":"sprites/spr_play/spr_play.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_quit","path":"sprites/spr_quit/spr_quit.yy",},},
+    {"id":{"name":"spr_ruido","path":"sprites/spr_ruido/spr_ruido.yy",},},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},},
     {"id":{"name":"spr_volume_bar","path":"sprites/spr_volume_bar/spr_volume_bar.yy",},},
     {"id":{"name":"spr_volume_text","path":"sprites/spr_volume_text/spr_volume_text.yy",},},

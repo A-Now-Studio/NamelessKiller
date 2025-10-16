@@ -1,3 +1,44 @@
+//======= INPUT ROLL ==========
+if (!isRolling && place_meeting(x, y + 1, obj_solid)) {
+	var dir_input = 0;
+	
+	if (keyboard_check(vk_shift)) {
+		if (keyboard_check(ord("A"))) dir_input = -1;
+		if (keyboard_check(ord("D"))) dir_input = 1;
+	}
+	
+	if (dir_input != 0) {
+			isRolling = true;
+			roll_timer = roll_duration;
+			image_xscale = dir_input;
+			hspd = dir_input * roll_speed;
+			vspd = 0;
+	}
+}
+
+// ======= COMPORTAMENTO DURANTE O ROLL ========
+if (isRolling) {
+	roll_timer -= 1;
+
+	// Movimento com colisão
+	if (!place_meeting(x + hspd, y, obj_solid)) {
+		x += hspd;
+	} else {
+		// Cancela se bater na parede
+		isRolling = false;
+		hspd = 0;
+	}
+	//Fim do Roll
+	if (roll_timer <= 0) {
+		isRolling = false;
+		hspd = 0;
+	}
+	
+	//Cancela input normal enquanto rola
+	exit;
+}
+
+//==========INPUT MOVIMENTAÇÃO=========
 var dir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 hspd = dir * move_speed;
 

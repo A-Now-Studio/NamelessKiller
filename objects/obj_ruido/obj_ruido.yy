@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_katana_hitbox",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_ruido",
+  "eventList":[],
   "managed":true,
-  "name":"obj_katana_hitbox",
+  "name":"obj_ruido",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox",
-    "path":"sprites/spr_hitbox/spr_hitbox.yy",
+    "name":"spr_ruido",
+    "path":"sprites/spr_ruido/spr_ruido.yy",
   },
   "spriteMaskId":null,
   "visible":true,

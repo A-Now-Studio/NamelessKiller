@@ -1,6 +1,13 @@
+//======MOVIMENTAÇÃO=======
 hspd = 0;
 vspd = 0;
-move_speed = 2;
+move_speed = 3;
 jump_speed = -8;
 gravity = 0.5;
 max_fall = 10;
+
+//======ROLL======
+isRolling = false;
+roll_timer = 0;
+roll_speed = 5; //velocidade do impulso
+roll_duration = 24; //frames (0.4s a 60 fps)
