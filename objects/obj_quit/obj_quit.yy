@@ -10,8 +10,8 @@
   "name":"obj_quit",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"INTERFACE",
+    "path":"folders/Objects/INTERFACE.yy",
   },
   "parentObjectId":null,
   "persistent":false,

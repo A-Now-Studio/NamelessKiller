@@ -1,3 +1,45 @@
+if (global.freeze_timer > 0) {
+    if (object_index == obj_enemy || object_index == obj_player) {
+        exit; // pausa apenas lógica de jogo
+    }
+}
+
+
+// =======TIMERS ATTACK=======
+if (attack_lock > 0) attack_lock -= 1;
+if (attack_cooldown > 0) attack_cooldown -= 1;
+
+// ======= ATTACK ==========
+if (keyboard_check_pressed(ord("K")) && attack_cooldown <= 0 && !isRolling) {
+	// bloquear ações por attack_lock_duration frames
+	attack_lock = attack_lock_duration;
+	// aplica cooldown
+	attack_cooldown = attack_cooldown_duration;
+	
+	// difine direção e offsets(ajustar conforme sprite)
+	var atk_dir = image_xscale // = -1 ou 1
+	var offset_x = 20 * atk_dir;
+	var offset_y = 0;
+	
+	//cria hitbox na layer do player
+	var hb = instance_create_layer(x + offset_x, y + offset_y, layer, obj_katana_hitbox);
+	var hbs = instance_create_layer(x + offset_x, y + offset_y, layer, obj_slash_effect);
+
+	with (hb) {
+		life = 4;		//vida curta para durar pouco tempo
+		damage = 1;
+		owner = id;		//opcional, é referencia de quem atacou
+		image_xscale = atk_dir;
+	}
+	with (hbs) {
+		life = 6;		//vida curta para durar pouco tempo
+		damage = 1;
+		owner = id;		//opcional, é referencia de quem atacou
+		image_xscale = atk_dir;
+	}
+}
+		
+
 //======= INPUT ROLL ==========
 if (!isRolling && place_meeting(x, y + 1, obj_solid)) {
 	var dir_input = 0;
@@ -67,12 +109,3 @@ if (place_meeting(x, y + vspd, obj_solid)) {
     vspd = 0;
 }
 y += vspd;
-
-////////ATAQUE/////////
-if (keyboard_check_pressed(ord("K"))) {
-	var atk_dir = image_xscale;
-	var offset_x = 16 * atk_dir;
-	var offset_y = 0;
-	
-	instance_create_layer(x + offset_x, y + offset_y, layer, obj_katana_hitbox)
-}

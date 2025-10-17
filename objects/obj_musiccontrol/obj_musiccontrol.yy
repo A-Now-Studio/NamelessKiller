@@ -9,8 +9,8 @@
   "name":"obj_musiccontrol",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"SYSTEMS",
+    "path":"folders/Objects/SYSTEMS.yy",
   },
   "parentObjectId":null,
   "persistent":false,

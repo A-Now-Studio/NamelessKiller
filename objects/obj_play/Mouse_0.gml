@@ -1,2 +1,2 @@
-room_goto(Fase1);
+room_goto(test);
 audio_stop_sound(sountrack_menu);

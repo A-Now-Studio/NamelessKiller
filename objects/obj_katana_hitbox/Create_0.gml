@@ -1,5 +1,5 @@
-life = 6 //dura 6 frames
+life = 4; // frames
 damage = 1;
-
-visible = true;
-image_alpha = 1;
+owner = noone; //preenchido por quem criou
+visible = true; //usado para debug, depois fica false
+hit_list = [];;

@@ -9,8 +9,8 @@
   "name":"obj_katana_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"PLAYER",
+    "path":"folders/Objects/PLAYER.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,5 +35,5 @@
     "path":"sprites/spr_hitbox/spr_hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
