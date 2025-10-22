@@ -56,6 +56,7 @@
   "resources":[
     {"id":{"name":"obj_back","path":"objects/obj_back/obj_back.yy",},},
     {"id":{"name":"obj_continue","path":"objects/obj_continue/obj_continue.yy",},},
+    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},},
     {"id":{"name":"obj_katana_hitbox","path":"objects/obj_katana_hitbox/obj_katana_hitbox.yy",},},
@@ -69,7 +70,6 @@
     {"id":{"name":"obj_ruido","path":"objects/obj_ruido/obj_ruido.yy",},},
     {"id":{"name":"obj_slash_effect","path":"objects/obj_slash_effect/obj_slash_effect.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
-    {"id":{"name":"obj_time_controller","path":"objects/obj_time_controller/obj_time_controller.yy",},},
     {"id":{"name":"obj_volume_display","path":"objects/obj_volume_display/obj_volume_display.yy",},},
     {"id":{"name":"obj_volume_down","path":"objects/obj_volume_down/obj_volume_down.yy",},},
     {"id":{"name":"obj_volume_text","path":"objects/obj_volume_text/obj_volume_text.yy",},},

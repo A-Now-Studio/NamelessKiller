@@ -1,13 +1,12 @@
-if (global.freeze_timer > 0) {
-    if (object_index == obj_enemy || object_index == obj_player) {
-        exit; // pausa apenas lógica de jogo
-    }
-}
 
+if (global.freeze_timer > 0) exit; // pausa total
+
+// ===== TIME SCALE GLOBAL ======
+var ts = global.time_scale;
 
 // =======TIMERS ATTACK=======
-if (attack_lock > 0) attack_lock -= 1;
-if (attack_cooldown > 0) attack_cooldown -= 1;
+if (attack_lock > 0) attack_lock -= 1 * ts;
+if (attack_cooldown > 0) attack_cooldown -= 1 * ts;
 
 // ======= ATTACK ==========
 if (keyboard_check_pressed(ord("K")) && attack_cooldown <= 0 && !isRolling) {
@@ -60,7 +59,7 @@ if (!isRolling && place_meeting(x, y + 1, obj_solid)) {
 
 // ======= COMPORTAMENTO DURANTE O ROLL ========
 if (isRolling) {
-	roll_timer -= 1;
+	roll_timer -= 1 * ts;
 
 	// Movimento com colisão
 	if (!place_meeting(x + hspd, y, obj_solid)) {
@@ -84,18 +83,18 @@ if (isRolling) {
 var dir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 hspd = dir * move_speed;
 
-vspd = min(vspd + gravity, max_fall);
+vspd = min(vspd + gravity * ts, max_fall);
 
 if (keyboard_check_pressed(vk_space) && place_meeting(x, y + 1, obj_solid))
-    vspd = jump_speed;
+    vspd = jump_speed * ts;
 
 /////////Movimento horizontal////////
-if (place_meeting(x + hspd, y, obj_solid)) {
-    while (!place_meeting(x + sign(hspd), y, obj_solid))
-        x += sign(hspd);
+if (place_meeting(x + hspd * ts, y, obj_solid)) {
+    while (!place_meeting(x + sign(hspd) * ts, y, obj_solid))
+        x += sign(hspd) * ts;
     hspd = 0;
 }
-x += hspd;
+x += hspd * ts;
 
 ///////DIREÇÃO VISUAL///////
 if (hspd != 0) {
@@ -103,9 +102,9 @@ if (hspd != 0) {
 }
 
 ////////Movimento vertical//////
-if (place_meeting(x, y + vspd, obj_solid)) {
-    while (!place_meeting(x, y + sign(vspd), obj_solid))
-        y += sign(vspd);
+if (place_meeting(x, y + vspd * ts, obj_solid)) {
+    while (!place_meeting(x, y + sign(vspd) * ts, obj_solid))
+        y += sign(vspd) * ts;
     vspd = 0;
 }
-y += vspd;
+y += vspd * ts;
